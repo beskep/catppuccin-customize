@@ -1,0 +1,44 @@
+[project]
+name            = "catppuccin-customize"
+version         = "0.1.0"
+description     = "catppuccin-customize"
+readme          = "README.md"
+requires-python = ">=3.14"
+
+dependencies = [
+  "catppuccin>=2.5.0",
+  "coloraide>=7.0",
+  "cyclopts>=4.5.0",
+  "msgspec>=0.20.0",
+  "tomli-w>=1.2.0",
+]
+
+[tool.ruff]
+preview       = true
+output-format = "concise"
+
+[tool.ruff.format]
+quote-style           = "single"
+docstring-code-format = true
+
+[tool.ruff.lint]
+select = ["ALL"]
+ignore = [
+  "ANN", # flake8-annotations
+  "COM", # flake8-commas
+  "CPY", # flake8-copyright
+  "D",   # pydocstyle
+  "FIX", # flake8-fixme
+  "Q",   # flake8-quotes
+]
+extend-safe-fixes = [
+  "EM", # flake8-errmsg
+  "TC", # flake8-type-checking
+]
+future-annotations = true
+
+[tool.mypy]
+disable_error_code  = ["import", "import-untyped"]
+check_untyped_defs  = true
+warn_unused_configs = true
+warn_unused_ignores = true

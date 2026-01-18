@@ -1,0 +1,42 @@
+[[light]]
+accent   = false
+variable = 'hue'
+type     = 'value'
+value    = 260
+
+[[light]]
+accent   = false
+variable = 'saturation'
+type     = 'multiply'
+value    = 0.9
+
+[[dark]]
+name     = 'Green'
+variable = 'lightness'
+type     = 'multiply'
+value    = 0.9
+
+[[dark]]
+accent   = false
+variable = 'hue'
+type     = 'value'
+value    = 260
+
+[[dark]]
+name     = 'Text'
+variable = 'lightness'
+type     = 'multiply'
+value    = 1.1
+
+# terminal theme
+[[dark]]
+name     = 'Subtext 1'
+variable = 'lightness'
+type     = 'multiply'
+value    = 1.1
+
+[[dark]]
+name     = 'Subtext 0'
+variable = 'lightness'
+type     = 'multiply'
+value    = 1.1
