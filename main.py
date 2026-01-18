@@ -53,13 +53,16 @@ class _Colors:
         c = _Color(color.hex).convert('okhsl')
 
         for edit in edits:
-            if edit.name == color.name or edit.accent == color.accent:
+            if (
+                edit.name in {color.name, color.identifier}
+                or edit.accent == color.accent
+            ):
                 c.set(edit.variable, edit)
 
         custom = c.convert('srgb').to_string(hex=True)
 
         return cls(
-            name=color.name,
+            name=color.identifier,
             original=color.hex,
             custom=custom,
             changed=color.hex != custom,
